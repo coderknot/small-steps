@@ -19,7 +19,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:text="Small Steps" />
+        android:layout_marginTop="75dp"
+        android:text="Small Steps"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="60sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
