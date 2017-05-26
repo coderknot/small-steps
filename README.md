@@ -1,6 +1,6 @@
 # Small Steps
 
-#### _Android app for building habits focusing on small steps to develop discipline, Current Version: 05-26-2017_
+#### _An Android app focusing on habit building through small steps, Current Version: 05-26-2017_
 
 #### By _**John Carr**_
 
