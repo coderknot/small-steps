@@ -1,5 +1,6 @@
 package com.epicodus.smallsteps;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if(v == mAboutButton) {
             Toast.makeText(MainActivity.this, "About button clicked", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+            startActivity(intent);
         }
     }
 }
