@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">SmallSteps</string>
+    <string name="app_name">Small Steps</string>
+    <string name="about_title">About</string>
+    <string name="about_text_1">
+        Habit building is a process based on what you do repeatedly. It takes, on average, 66 days to build a habit. Given the time and commitment required, it is difficult to maintain the motivation to keep going.
+    </string>
+    <string name="about_text_2">
+        Small Steps aims to help you build habits by focusing on small steps. It is based on the ideas of The 3 R’s of Habit Change: Reminder, Routine, and Reward.
+    </string>
+    <string name="about_text_3">A Reminder is the trigger that initiates the behavior.\n\nA Routine is the behavior, itself.\n\nA Reward is the benefit gained from performing the behavior.
+    </string>
+    <string name="about_text_4">
+        This app uses Reminders to trigger Routines to earn Rewards.
+    </string>
+    <string name="about_text_5">
+        With this process, small steps build big habits!
+    </string>
 </resources>
