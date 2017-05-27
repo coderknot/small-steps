@@ -18,13 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".AboutActivity">
+        <activity android:name=".AboutActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.epicodus.smallsteps.MainActivity">
-            </meta-data>
+                android:value="com.epicodus.smallsteps.MainActivity"></meta-data>
         </activity>
+        <activity android:name=".HabitsActivity"></activity>
     </application>
 
 </manifest>
