@@ -14,7 +14,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @Bind(R.id.appNameTextView) TextView mAppNameTextView;
-    @Bind(R.id.beginButton) Button mBeginButton;
+    @Bind(R.id.startButton) Button mBeginButton;
     @Bind(R.id.aboutButton) Button mAboutButton;
 
     @Override
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(v == mBeginButton) {
-            Toast.makeText(MainActivity.this, "Begin button clicked", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "Start button clicked", Toast.LENGTH_LONG).show();
         }
         if(v == mAboutButton) {
             Toast.makeText(MainActivity.this, "About button clicked", Toast.LENGTH_LONG).show();
