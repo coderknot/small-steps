@@ -6,4 +6,17 @@
     android:layout_height="match_parent"
     tools:context="com.epicodus.smallsteps.HabitsActivity">
 
+    <TextView
+        android:id="@+id/habitsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/habits_title"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
 </RelativeLayout>
