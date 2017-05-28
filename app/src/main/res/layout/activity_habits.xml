@@ -15,8 +15,41 @@
         android:layout_marginTop="30dp"
         android:text="@string/habits_title"
         android:textColor="@color/colorPrimaryText"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
+    <EditText
+        android:id="@+id/habitNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/habitsTextView"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/habits_habitNameEditText_hint" />
+
+    <Button
+        android:id="@+id/addHabitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/habitNameEditText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryText"
+        android:layout_toEndOf="@+id/habitNameEditText"
+        android:layout_toRightOf="@+id/habitNameEditText"
+        android:text="@string/habits_addHabitButton_text" />
+
+    <ListView
+        android:id="@+id/habitsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/habitNameEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
 
 </RelativeLayout>
