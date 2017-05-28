@@ -11,7 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/main_background" />
+        app:srcCompat="@drawable/main_background"
+        android:contentDescription="@string/app_background" />
 
     <TextView
         android:id="@+id/appNameTextView"
