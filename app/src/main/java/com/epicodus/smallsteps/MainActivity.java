@@ -33,12 +33,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(v == mStartButton) {
-            Toast.makeText(MainActivity.this, "Start button clicked", Toast.LENGTH_LONG).show();
             Intent habitsIntent = new Intent(MainActivity.this, HabitsActivity.class);
             startActivity(habitsIntent);
         }
         if(v == mAboutButton) {
-            Toast.makeText(MainActivity.this, "About button clicked", Toast.LENGTH_LONG).show();
             Intent aboutIntent = new Intent(MainActivity.this, AboutActivity.class);
             startActivity(aboutIntent);
         }
