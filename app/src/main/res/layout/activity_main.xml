@@ -11,7 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/main_background" />
+        app:srcCompat="@drawable/main_background"
+        android:contentDescription="@string/app_background" />
 
     <TextView
         android:id="@+id/appNameTextView"
@@ -33,7 +34,7 @@
         android:layout_centerVertical="true"
         android:width="200dp"
         android:background="@color/colorPrimary"
-        android:text="Start"
+        android:text="@string/main_startButton_text"
         android:textColor="@color/colorPrimaryText" />
 
     <Button
@@ -42,7 +43,7 @@
         android:layout_height="wrap_content"
         android:width="200dp"
         android:background="@color/colorPrimaryDark"
-        android:text="About"
+        android:text="@string/main_aboutButton_text"
         android:textColor="@color/colorPrimaryText"
         android:layout_below="@+id/startButton"
         android:layout_alignLeft="@+id/startButton"

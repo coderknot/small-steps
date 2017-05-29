@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Small Steps</string>
+    <string name="app_background">App Background</string>
+    <string name="main_startButton_text">Start</string>
+    <string name="main_aboutButton_text">About</string>
     <string name="about_title">About</string>
     <string name="about_text_1">
         Habit building is a process based on what you do repeatedly. It takes, on average, 66 days to build a habit. Given the time and commitment required, it is difficult to maintain the motivation to keep going.
@@ -15,4 +18,7 @@
     <string name="about_text_5">
         With this process, small steps build big habits!
     </string>
+    <string name="habits_title">Habits</string>
+    <string name="habits_habitNameEditText_hint">New Habit Name</string>
+    <string name="habits_addHabitButton_text">Add Habit</string>
 </resources>

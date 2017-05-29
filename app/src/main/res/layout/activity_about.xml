@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryLight"
+    android:background="@color/colorBackground"
     tools:context="com.epicodus.smallsteps.AboutActivity">
 
     <TextView
@@ -16,7 +16,7 @@
         android:layout_marginTop="30dp"
         android:text="@string/about_title"
         android:textColor="@color/colorPrimaryText"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <TextView
