@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context="com.epicodus.smallsteps.HabitsActivity">
 
     <TextView
@@ -44,12 +45,22 @@
         android:layout_toRightOf="@+id/habitNameEditText"
         android:text="@string/habits_addHabitButton_text" />
 
+    <View
+        android:id="@+id/habitsListViewDividerBegin"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@+id/addHabitButton"
+        android:layout_marginTop="28dp"/>
+
     <ListView
         android:id="@+id/habitsListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/habitNameEditText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="30dp"
+        android:divider="@color/colorPrimary"
+        android:dividerHeight="1dp" />
 
 </RelativeLayout>
