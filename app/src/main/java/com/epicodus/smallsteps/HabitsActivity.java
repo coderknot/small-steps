@@ -10,7 +10,6 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -49,12 +48,17 @@ public class HabitsActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         if(v == mAddHabitButton) {
-            //TODO: Form Input Validation
             String habitName = mHabitNameEditText.getText().toString();
-            habits.add(habitName);
-            Toast.makeText(HabitsActivity.this, "New Habit Added!", Toast.LENGTH_SHORT).show();
-            adapter.notifyDataSetChanged();
-            mHabitNameEditText.setText("");
+
+            if(habitName.length() <= 0) {
+                Toast.makeText(HabitsActivity.this, "Please enter a name for your new habit.", Toast.LENGTH_LONG).show();
+                mHabitNameEditText.setText("");
+            } else {
+                habits.add(habitName);
+                Toast.makeText(HabitsActivity.this, "New habit added!", Toast.LENGTH_SHORT).show();
+                adapter.notifyDataSetChanged();
+                mHabitNameEditText.setText("");
+            }
         }
     }
 }
