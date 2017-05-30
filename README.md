@@ -5,18 +5,42 @@
 #### By _**John Carr**_
 
 ## Description
+Small Steps is an Android App that aims to help you build habits by focusing on small steps. It is based on the ideas of The 3 R’s of Habit Change: Reminder, Routine, and Reward:
 
+* A Reminder is the trigger that initiates the behavior.
+* A Routine is the behavior, itself.
+* A Reward is the benefit gained from performing the behavior.
+
+This app uses Reminders to trigger Routines to earn Rewards. With this process, small steps build big habits!
 
 ## Setup / Installation Requirements
 
+### Prerequisites
+
+You will need the following things properly installed on your computer:
+
+* [Java SDK 1.8 Update 121 +](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* [Android Studio 2.3.2 +](https://developer.android.com/studio/index.html)
+
+
+### Installation
+
+* `git clone <repository-url>` this repository
+* Open this project in Android studio
+* Run in AVD emulator
 
 ## Planning
 
+## Known Issues/Bugs
+No known issues or bugs.
 
 ## Technologies Used
 * _Android_
 * _Java_
 * _XML_
+
+## Acknowledgements
+[ButterKnife](https://github.com/JakeWharton/butterknife)
 
 ## Support and contact details
 Questions? Concerns? Suggestions?
