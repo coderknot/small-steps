@@ -34,6 +34,12 @@ You will need the following things properly installed on your computer:
 
 ## Planning
 
+### Specifications
+| Behavior | Example Input | Example Output |
+|----------|---------------|----------------|
+| Users can view a list of habits/steps | User navigates to Habits Activity | Habits List is displayed |
+| Users can add habits/steps | User enters Habit name | Habit is added to list |
+
 ## Known Issues/Bugs
 No known issues or bugs.
 
