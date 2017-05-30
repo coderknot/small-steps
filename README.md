@@ -13,6 +13,9 @@ Small Steps is an Android App that aims to help you build habits by focusing on 
 
 This app uses Reminders to trigger Routines to earn Rewards. With this process, small steps build big habits!
 
+![Small Steps: Main Activity](/app/src/main/assets/images/MainActivity.jpg?raw=true "Small Step - Main Activity")
+![Small Steps: Habits Activity](/app/src/main/assets/images/HabitsActivity.jpg?raw=true "Small Step - Habits Activity")
+
 ## Setup / Installation Requirements
 
 ### Prerequisites
