@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    tools:context="com.epicodus.smallsteps.AboutActivity">
+    tools:context="com.epicodus.smallsteps.ui.AboutActivity">
 
     <TextView
         android:id="@+id/aboutTextView"

@@ -1,4 +1,4 @@
-package com.epicodus.smallsteps;
+package com.epicodus.smallsteps.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.epicodus.smallsteps.R;
 
 import java.util.ArrayList;
 
