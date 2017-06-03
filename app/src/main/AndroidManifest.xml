@@ -36,7 +36,7 @@
         <activity android:name=".ui.GroupListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.epicodus.smallsteps.ui.MainActivity" />
+                android:value="com.epicodus.smallsteps.ui.SearchActivity" />
         </activity>
     </application>
 
