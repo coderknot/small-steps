@@ -78,7 +78,7 @@
         android:layout_below="@+id/zipEditText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="14dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorPrimary"
         android:text="@string/search_searchButton_text"
         android:textColor="@color/colorPrimaryText" />
 
