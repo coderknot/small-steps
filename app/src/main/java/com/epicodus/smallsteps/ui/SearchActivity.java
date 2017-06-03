@@ -30,7 +30,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         if(v == mSearchButton) {
-            String searchText = mSearchEditText.getText().toString();
+            String searchText = mSearchEditText.getText().toString().toLowerCase();
             String searchZip = mZipEditText.getText().toString();
 
             Log.v("Search Activity", searchText);
