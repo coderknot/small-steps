@@ -38,6 +38,19 @@
         android:textColor="@color/colorPrimaryText" />
 
     <Button
+        android:id="@+id/habitsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:width="200dp"
+        android:background="@drawable/button_transparent_with_border"
+        android:text="@string/main_habitsButton_text"
+        android:layout_below="@+id/startButton"
+        android:layout_alignLeft="@+id/startButton"
+        android:layout_alignStart="@+id/startButton"
+        android:layout_marginTop="14dp" />
+
+    <Button
         android:id="@+id/aboutButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,9 +58,9 @@
         android:background="@color/colorPrimaryDark"
         android:text="@string/main_aboutButton_text"
         android:textColor="@color/colorPrimaryText"
-        android:layout_below="@+id/startButton"
-        android:layout_alignLeft="@+id/startButton"
-        android:layout_alignStart="@+id/startButton"
+        android:layout_below="@+id/habitsButton"
+        android:layout_alignLeft="@+id/habitsButton"
+        android:layout_alignStart="@+id/habitsButton"
         android:layout_marginTop="14dp" />
 
 </RelativeLayout>
