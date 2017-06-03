@@ -28,7 +28,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.smallsteps.ui.MainActivity"></meta-data>
         </activity>
-        <activity android:name=".ui.SearchActivity"></activity>
+        <activity android:name=".ui.SearchActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.epicodus.smallsteps.ui.MainActivity"></meta-data>
+        </activity>
     </application>
 
 </manifest>
