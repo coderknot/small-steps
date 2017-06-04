@@ -3,10 +3,12 @@ package com.epicodus.smallsteps.ui;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.epicodus.smallsteps.R;
+import com.epicodus.smallsteps.adapters.GroupListAdapter;
 import com.epicodus.smallsteps.models.Group;
 import com.epicodus.smallsteps.services.MeetupGroupService;
 
@@ -20,9 +22,10 @@ import okhttp3.Callback;
 import okhttp3.Response;
 
 public class GroupListActivity extends AppCompatActivity {
-    @Bind(R.id.groupRecyclerView) RecyclerView mGroupRecyclerView;
+    @Bind(R.id.groupRecyclerView) RecyclerView groupRecyclerView;
+    private GroupListAdapter groupListAdapter;
 
-    public ArrayList<Group> mGroupList = new ArrayList<>();
+    public ArrayList<Group> groupList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +54,20 @@ public class GroupListActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(Call call, Response response) {
-                mGroupList = meetupGroupService.processResults(response);
+                groupList = meetupGroupService.processResults(response);
+
+                GroupListActivity.this.runOnUiThread(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        groupListAdapter = new GroupListAdapter(getApplicationContext(), groupList);
+                        groupRecyclerView.setAdapter(groupListAdapter);
+                        RecyclerView.LayoutManager layoutManager =
+                                new LinearLayoutManager(GroupListActivity.this);
+                        groupRecyclerView.setLayoutManager(layoutManager);
+                        groupRecyclerView.setHasFixedSize(true);
+                    }
+                });
             }
         });
     }
