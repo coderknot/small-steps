@@ -61,4 +61,8 @@ public class Group {
     public int getMemberCount() {
         return this.memberCount;
     }
+
+    public String getShortDescription() {
+        return this.description.substring(0, 120).concat("...");
+    }
 }
