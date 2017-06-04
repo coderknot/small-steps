@@ -7,7 +7,7 @@
     <ImageView
         android:layout_width="130dp"
         android:layout_height="100dp"
-        android:id="@+id/weatherImageView"
+        android:id="@+id/groupImageView"
         android:src="@drawable/group_icon_default"
         android:scaleType="centerCrop"/>
 
