@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/groupNameTextView"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             android:text="Group Name"
             android:textColor="@color/colorPrimary"/>
@@ -52,12 +52,22 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/groupMembersTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Member Count"
-                android:id="@+id/groupMemberCountTextView"
                 android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true" />
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:text="Members: " />
+
+            <TextView
+                android:id="@+id/groupMemberCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/groupMembersTextView"
+                android:layout_toRightOf="@+id/groupMembersTextView"
+                android:text="Member Count" />
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>
