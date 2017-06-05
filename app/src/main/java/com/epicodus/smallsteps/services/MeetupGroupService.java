@@ -66,15 +66,23 @@ public class MeetupGroupService {
                     JSONObject groupJSON = meetupJSON.getJSONObject(i);
 
                     String name = groupJSON.getString("name");
-                    String link = groupJSON.getString("link");
                     String category = groupJSON.getJSONObject("category").getString("name");
                     String city = groupJSON.getString("city");
                     String state = groupJSON.getString("state");
                     String country = groupJSON.getString("country");
                     String description = groupJSON.getString("description");
                     int memberCount = groupJSON.getInt("members");
+                    String groupUrl = groupJSON.getString("link");
 
-                    Group group = new Group(name, link, category, city, state, country, description, memberCount);
+                    String imageUrl;
+
+                    if(groupJSON.has("group_photo")) {
+                        imageUrl = groupJSON.getJSONObject("group_photo").getString("thumb_link");
+                    } else {
+                        imageUrl = "";
+                    }
+
+                    Group group = new Group(name, category, city, state, country, description, memberCount, groupUrl, imageUrl);
                     groupList.add(group);
                 }
             }
