@@ -4,38 +4,37 @@ import com.epicodus.smallsteps.ui.SearchActivity;
 
 public class Group {
     String name; //name
-    String link; //link
     String category; //category: name
     String city; //city
     String state; //state
     String country; //country
     String description; //description
     int memberCount; //members
+    String groupUrl; //link
+    String imageUrl;
 
     public Group(String name,
-                 String link,
                  String category,
                  String city,
                  String state,
                  String country,
                  String description,
-                 int memberCount) {
+                 int memberCount,
+                 String groupUrl,
+                 String imageUrl) {
         this.name = name;
-        this.link = link;
         this.category = category;
         this.city = city;
         this.state = state;
         this.country = country;
         this.description = description;
         this.memberCount = memberCount;
+        this.groupUrl = groupUrl;
+        this.imageUrl = imageUrl;
     }
 
     public String getName() {
         return this.name;
-    }
-
-    public String getLink() {
-        return this.link;
     }
 
     public String getCategory() {
@@ -60,6 +59,14 @@ public class Group {
 
     public int getMemberCount() {
         return this.memberCount;
+    }
+
+    public String getGroupUrl() {
+        return this.groupUrl;
+    }
+
+    public String getImageUrl() {
+        return this.imageUrl;
     }
 
     public String getShortDescription() {
