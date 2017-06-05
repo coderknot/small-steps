@@ -80,6 +80,19 @@
         android:textColor="@color/colorPrimaryText" />
 
     <Button
+        android:id="@+id/githubButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summaryTextView5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:width="200dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryText"
+        android:text="Project Github" />
+
+    <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
