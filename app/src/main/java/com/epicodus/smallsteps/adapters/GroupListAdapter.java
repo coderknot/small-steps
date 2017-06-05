@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.epicodus.smallsteps.R;
 import com.epicodus.smallsteps.models.Group;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -61,6 +62,10 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.Grou
             groupCategoryTextView.setText(group.getCategory());
             groupLocationTextView.setText(group.getCity());
             groupMemberCountTextView.setText(String.valueOf(group.getMemberCount()));
+
+            if(group.getImageUrl() != "") {
+                Picasso.with(context).load(group.getImageUrl()).into(groupImageView);
+            }
         }
     }
 
