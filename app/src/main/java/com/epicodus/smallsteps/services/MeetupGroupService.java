@@ -64,7 +64,7 @@ public class MeetupGroupService {
                     String imageUrl;
 
                     if(groupJSON.has("group_photo")) {
-                        imageUrl = groupJSON.getJSONObject("group_photo").getString("thumb_link");
+                        imageUrl = groupJSON.getJSONObject("group_photo").getString("photo_link");
                     } else {
                         imageUrl = "";
                     }
