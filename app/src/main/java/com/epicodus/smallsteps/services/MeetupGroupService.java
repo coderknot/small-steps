@@ -1,7 +1,5 @@
 package com.epicodus.smallsteps.services;
 
-import android.util.Log;
-
 import com.epicodus.smallsteps.Constants;
 import com.epicodus.smallsteps.models.Group;
 
@@ -34,17 +32,6 @@ public class MeetupGroupService {
         urlBuilder.addQueryParameter(Constants.MEETUP_TEXT_PARAMETER, searchText);
         urlBuilder.addQueryParameter(Constants.MEETUP_API_QUERY_PARAMETER, Constants.MEETUP_API_KEY);
         String url = urlBuilder.build().toString();
-
-        Log.v("Meetup Group Service", url);
-
-        url = Constants.MEETUP_BASE_URL +
-                Constants.MEETUP_SIGN_PARAMETER + "=" + MEETUP_SIGN_VALUE + "&" +
-                Constants.MEETUP_PHOTO_HOST_PARAMETER + "=" + MEETUP_PHOTO_HOST_VALUE + "&" +
-                Constants.MEETUP_ZIP_PARAMETER + "=" + searchZip + "&" +
-                Constants.MEETUP_TEXT_PARAMETER + "=" + searchText + "&" +
-                Constants.MEETUP_API_QUERY_PARAMETER + "=" + Constants.MEETUP_API_KEY;
-
-        Log.v("Meetup Group Service", url);
 
         Request request = new Request.Builder()
                 .url(url)
