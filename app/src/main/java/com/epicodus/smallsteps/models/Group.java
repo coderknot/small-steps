@@ -69,7 +69,19 @@ public class Group {
         return this.imageUrl;
     }
 
+    public String getShortName() {
+        if(this.getName().length() > 30) {
+            return this.getName().substring(0, 30).concat("...");
+        } else {
+            return this.getName();
+        }
+    }
+
     public String getShortDescription() {
-        return this.description.substring(0, 120).concat("...");
+        if(this.getDescription().length() > 120) {
+            return this.description.substring(0, 120).concat("...");
+        } else {
+            return this.getDescription();
+        }
     }
 }

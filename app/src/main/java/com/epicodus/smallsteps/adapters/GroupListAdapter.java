@@ -58,7 +58,7 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.Grou
         }
 
         public void bindGroup(Group group) {
-            groupNameTextView.setText(group.getName());
+            groupNameTextView.setText(group.getShortName());
             groupCategoryTextView.setText(group.getCategory());
             groupLocationTextView.setText(group.getCity());
             groupMemberCountTextView.setText(String.valueOf(group.getMemberCount()));
