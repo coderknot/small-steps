@@ -4,11 +4,15 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.epicodus.smallsteps.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -34,10 +38,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        int menuId = menuItem.getItemId();
+        if (menuId == R.id.action_logout) {
+            logout();
+            return true;
+        }
+        return super.onOptionsItemSelected(menuItem);
+    }
+
+    private void logout() {
+        FirebaseAuth.getInstance().signOut();
+        Intent logoutIntent = new Intent(MainActivity.this, LoginActivity.class);
+        logoutIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(logoutIntent);
+        finish();
+    }
+
+    @Override
     public void onClick(View v) {
         if(v == mStartButton) {
-            Intent habitsIntent = new Intent(MainActivity.this, SearchActivity.class);
-            startActivity(habitsIntent);
+            Intent searchIntent = new Intent(MainActivity.this, SearchActivity.class);
+            startActivity(searchIntent);
         }
         if(v == mHabitsButton) {
             Intent habitsIntent = new Intent(MainActivity.this, HabitsActivity.class);
