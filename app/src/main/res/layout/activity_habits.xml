@@ -8,7 +8,7 @@
     tools:context="com.epicodus.smallsteps.ui.HabitsActivity">
 
     <TextView
-        android:id="@+id/habitsTextView"
+        android:id="@+id/habitsTitleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/habitsTextView"
+        android:layout_below="@+id/habitsTitleTextView"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         android:ems="10"
