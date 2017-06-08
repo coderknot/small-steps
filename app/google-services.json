@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "74688547428",
+    "firebase_url": "https://small-steps-49dac.firebaseio.com",
+    "project_id": "small-steps-49dac",
+    "storage_bucket": "small-steps-49dac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74688547428:android:419b6d257923c5da",
+        "android_client_info": {
+          "package_name": "com.epicodus.smallsteps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "74688547428-8sv5h4p7vvn1dpa2nd47hlk9dorm6a43.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.epicodus.smallsteps",
+            "certificate_hash": "c96118b8d768c413a12bbf6d56d46b9840f6fea1"
+          }
+        },
+        {
+          "client_id": "74688547428-81sm5ramkt5n2f3djeqs2871cnegpgb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpN7v4ytmxsw2uAHg4hMX6bdrZpc42DGE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "74688547428-81sm5ramkt5n2f3djeqs2871cnegpgb4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
