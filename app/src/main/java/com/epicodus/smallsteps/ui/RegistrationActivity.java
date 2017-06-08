@@ -87,11 +87,50 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
         };
     }
 
+    private boolean isValidEmail(String email) {
+        boolean isGoodEmail =
+                (email != null && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches());
+        if (!isGoodEmail) {
+            mRegistrationEmailEditText.setError("Please enter a valid email address.");
+            return false;
+        }
+        return isGoodEmail;
+    }
+
+    private boolean isValidName(String name) {
+        if (name.equals("")) {
+            mRegistrationNameEditText.setError("Please enter your name.");
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isValidPassword(String password) {
+        if (password.length() < 6) {
+            mRegistrationPasswordEditText.setError("Please create a password containing at least 6 characters.");
+            return false;
+        }
+        return true;
+    }
+
+    private boolean passwordsMatch(String password, String confirmPassword) {
+        if (!password.equals(confirmPassword)) {
+            mRegistrationConfirmPasswordEditText.setError("Passwords do not match!");
+            return false;
+        }
+        return true;
+    }
+
     private void registerUser() {
         final String name = mRegistrationNameEditText.getText().toString().trim();
         final String email = mRegistrationEmailEditText.getText().toString().trim();
         String password = mRegistrationPasswordEditText.getText().toString().trim();
         String confirmPassword = mRegistrationConfirmPasswordEditText.getText().toString().trim();
+
+        if (!isValidName(name) ||
+                !isValidEmail(email) ||
+                !isValidPassword(password) ||
+                !passwordsMatch(password, confirmPassword)) return;
 
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
