@@ -40,7 +40,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.smallsteps.ui.SearchActivity" />
         </activity>
-        <activity android:name=".ui.RegistrationActivity"></activity>
+        <activity android:name=".ui.RegistrationActivity" />
+        <activity android:name=".ui.LoginActivity"></activity>
     </application>
 
 </manifest>
