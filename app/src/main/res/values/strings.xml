@@ -29,4 +29,11 @@
     <string name="habits_title">Habits</string>
     <string name="habits_habitNameEditText_hint">New Habit Name</string>
     <string name="habits_addHabitButton_text">Add Habit</string>
+    <string name="registration_registrationTitleTextView_text">Account Registration</string>
+    <string name="registration_registrationNameEditText_hint">Name</string>
+    <string name="registration_registrationEmailEditText_hint">Email</string>
+    <string name="registration_registrationPasswordEditText_hint">Password</string>
+    <string name="registration_registrationConfirmPasswordEditText">Confirm Password</string>
+    <string name="registration_registrationSignUpButton_text">Sign Up</string>
+    <string name="registration_registrationLoginTextView_text">Already have an account? Log in here!</string>
 </resources>
