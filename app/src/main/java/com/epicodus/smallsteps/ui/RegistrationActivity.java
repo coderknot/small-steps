@@ -85,6 +85,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 final FirebaseUser user = firebaseAuth.getCurrentUser();
+
                 if(user != null) {
                     Intent authStateIntent = new Intent(RegistrationActivity.this, MainActivity.class);
                     authStateIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -151,16 +152,19 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
             mRegistrationNameEditText.setError("Please enter your name.");
             return false;
         }
+
         return true;
     }
 
     private boolean isValidEmail(String email) {
         boolean isGoodEmail =
                 (email != null && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches());
+
         if (!isGoodEmail) {
             mRegistrationEmailEditText.setError("Please enter a valid email address.");
             return false;
         }
+
         return isGoodEmail;
     }
 
@@ -169,6 +173,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
             mRegistrationPasswordEditText.setError("Please create a password containing at least 6 characters.");
             return false;
         }
+
         return true;
     }
 
@@ -177,6 +182,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
             mRegistrationConfirmPasswordEditText.setError("Passwords do not match!");
             return false;
         }
+
         return true;
     }
 }
