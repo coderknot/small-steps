@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -28,6 +29,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private ProgressDialog mAuthProgressDialog;
+    private String mUserName;
 
     @Bind(R.id.registrationNameEditText) EditText mRegistrationNameEditText;
     @Bind(R.id.registrationEmailEditText) EditText mRegistrationEmailEditText;
@@ -59,7 +61,10 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
     @Override
     public void onStop() {
         super.onStop();
-        mAuth.removeAuthStateListener(mAuthListener);
+
+        if(mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
     }
 
     @Override
@@ -97,13 +102,28 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
         mAuthProgressDialog.setCancelable(false);
     }
 
+    private void createUserProfile(final FirebaseUser firebaseUser) {
+        UserProfileChangeRequest addProfileName = new UserProfileChangeRequest.Builder()
+                .setDisplayName(mUserName)
+                .build();
+
+        firebaseUser.updateProfile(addProfileName).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()) {
+                    Log.d(TAG, firebaseUser.getDisplayName());
+                }
+            }
+        });
+    }
+
     private void registerUser() {
-        final String name = mRegistrationNameEditText.getText().toString().trim();
+        mUserName = mRegistrationNameEditText.getText().toString().trim();
         final String email = mRegistrationEmailEditText.getText().toString().trim();
         String password = mRegistrationPasswordEditText.getText().toString().trim();
         String confirmPassword = mRegistrationConfirmPasswordEditText.getText().toString().trim();
 
-        if (!isValidName(name) ||
+        if (!isValidName(mUserName) ||
                 !isValidEmail(email) ||
                 !isValidPassword(password) ||
                 !passwordsMatch(password, confirmPassword)) return;
@@ -118,6 +138,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
 
                         if(task.isSuccessful()) {
                             Log.v(TAG, "Authentication successful");
+                            createUserProfile(task.getResult().getUser());
                         } else {
                             Toast.makeText(RegistrationActivity.this, "Authentication failed", Toast.LENGTH_LONG).show();
                         }
