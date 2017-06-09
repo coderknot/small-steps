@@ -1,5 +1,6 @@
 package com.epicodus.smallsteps.ui;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
+    private ProgressDialog mAuthProgressDialog;
 
     @Bind(R.id.loginEmailEditText) EditText mLoginEmailEditText;
     @Bind(R.id.loginPasswordEditText) EditText mLoginPasswordEditText;
@@ -40,6 +42,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         mAuth = FirebaseAuth.getInstance();
         createAuthStateListener();
+        createAuthProgressDialog();
 
         mLoginButton.setOnClickListener(this);
         mLoginRegistrationTextView.setOnClickListener(this);
@@ -86,17 +89,27 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         };
     }
 
+    private void createAuthProgressDialog() {
+        mAuthProgressDialog = new ProgressDialog(this);
+        mAuthProgressDialog.setTitle("Loading...");
+        mAuthProgressDialog.setMessage("Authenticating login information...");
+        mAuthProgressDialog.setCancelable(false);
+    }
+
     private void loginUser() {
         String email = mLoginEmailEditText.getText().toString().trim();
         String password = mLoginPasswordEditText.getText().toString().trim();
 
         if(!isValidEmail(email) || !isValidPassword(password)) return;
 
+        mAuthProgressDialog.show();
+
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
 
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        mAuthProgressDialog.dismiss();
                         Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInWithEmail", task.getException());
