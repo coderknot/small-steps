@@ -36,6 +36,9 @@ public class NewHabitActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         if(v == mNewHabitCreateButton) {
             String newHabitTitle = mNewHabitTitleEditText.getText().toString();
+
+            if(!isValidTitle(newHabitTitle)) return;
+
             createNewHabit(newHabitTitle);
 
             Intent habitsListIntent = new Intent(NewHabitActivity.this, HabitsListActivity.class);
@@ -43,6 +46,15 @@ public class NewHabitActivity extends AppCompatActivity implements View.OnClickL
             startActivity(habitsListIntent);
 //            finish();
         }
+    }
+
+    private boolean isValidTitle(String title) {
+        if(title.equals("")) {
+            mNewHabitTitleEditText.setError("Please enter a title for your new habit.");
+            return false;
+        }
+
+        return true;
     }
 
     private void createNewHabit(String habitTitle) {
