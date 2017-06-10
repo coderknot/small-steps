@@ -5,7 +5,7 @@ import org.parceler.Parcel;
 @Parcel
 public class Habit {
     String title;
-    String uid;
+    String pushId;
 
     public Habit() { }
 
@@ -17,11 +17,11 @@ public class Habit {
         return this.title;
     }
 
-    public String getUid() {
-        return this.uid;
+    public String getPushId() {
+        return this.pushId;
     }
 
-    public void setUid(String uid) {
-        this.uid = uid;
+    public void setPushId(String pushId) {
+        this.pushId = pushId;
     }
 }
