@@ -44,7 +44,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.HabitsListActivity"></activity>
+        <activity android:name=".ui.HabitsListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.epicodus.smallsteps.ui.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
