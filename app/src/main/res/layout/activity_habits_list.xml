@@ -16,13 +16,13 @@ tools:context="com.epicodus.smallsteps.ui.HabitsListActivity"
         android:layout_alignParentBottom="true" >
 
         <Button
-            android:id="@+id/habitsListAddHabitButton"
+            android:id="@+id/habitsListNewHabitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:background="@color/colorPrimary"
             android:textColor="@color/colorPrimaryText"
-            android:text="Add Habit" />
+            android:text="New Habit" />
 
     </RelativeLayout>
 
