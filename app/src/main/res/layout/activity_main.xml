@@ -63,4 +63,17 @@
         android:layout_alignStart="@+id/habitsButton"
         android:layout_marginTop="14dp" />
 
+    <Button
+        android:id="@+id/habitsListButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/aboutButton"
+        android:layout_alignStart="@+id/aboutButton"
+        android:layout_below="@+id/aboutButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:width="200dp"
+        android:background="@drawable/button_transparent_with_border"
+        android:text="@string/main_habitsButton_text" />
+
 </RelativeLayout>
