@@ -38,7 +38,7 @@
         android:textColor="@color/colorPrimaryText" />
 
     <Button
-        android:id="@+id/habitsButton"
+        android:id="@+id/habitsListButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -58,9 +58,9 @@
         android:background="@color/colorPrimaryDark"
         android:text="@string/main_aboutButton_text"
         android:textColor="@color/colorPrimaryText"
-        android:layout_below="@+id/habitsButton"
-        android:layout_alignLeft="@+id/habitsButton"
-        android:layout_alignStart="@+id/habitsButton"
+        android:layout_below="@+id/habitsListButton"
+        android:layout_alignLeft="@+id/habitsListButton"
+        android:layout_alignStart="@+id/habitsListButton"
         android:layout_marginTop="14dp" />
 
 </RelativeLayout>
