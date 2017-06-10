@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Bind(R.id.appNameTextView) TextView mAppNameTextView;
     @Bind(R.id.startButton) Button mStartButton;
-    @Bind(R.id.habitsButton) Button mHabitsButton;
     @Bind(R.id.aboutButton) Button mAboutButton;
     @Bind(R.id.habitsListButton) Button mHabitsListButton;
 
@@ -52,7 +51,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         };
 
         mStartButton.setOnClickListener(this);
-        mHabitsButton.setOnClickListener(this);
         mAboutButton.setOnClickListener(this);
         mHabitsListButton.setOnClickListener(this);
     }
@@ -103,17 +101,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent searchIntent = new Intent(MainActivity.this, SearchActivity.class);
             startActivity(searchIntent);
         }
-        if(v == mHabitsButton) {
-            Intent habitsIntent = new Intent(MainActivity.this, HabitsActivity.class);
-            startActivity(habitsIntent);
+        if(v == mHabitsListButton) {
+            Intent habitsListIntenet = new Intent(MainActivity.this, HabitsListActivity.class);
+            startActivity(habitsListIntenet);
         }
         if(v == mAboutButton) {
             Intent aboutIntent = new Intent(MainActivity.this, AboutActivity.class);
             startActivity(aboutIntent);
-        }
-        if(v == mHabitsListButton) {
-            Intent habitsListIntenet = new Intent(MainActivity.this, HabitsListActivity.class);
-            startActivity(habitsListIntenet);
         }
     }
 }
