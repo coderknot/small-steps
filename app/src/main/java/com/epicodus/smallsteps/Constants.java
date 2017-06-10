@@ -9,5 +9,7 @@ public class Constants {
     public static final String MEETUP_TEXT_PARAMETER = "text";
     public static final String MEETUP_API_QUERY_PARAMETER = "key";
 
+    public static final String FIREBASE_CHILD_HABITS="habits";
+
     public static final String GITHUB_PROJECT_URL = "https://github.com/coderknot/small-steps";
 }
