@@ -15,7 +15,7 @@
         android:contentDescription="@string/app_background" />
 
     <TextView
-        android:id="@+id/appNameTextView"
+        android:id="@+id/mainAppNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
