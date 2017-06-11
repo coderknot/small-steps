@@ -13,6 +13,9 @@ import android.widget.EditText;
 import com.epicodus.smallsteps.Constants;
 import com.epicodus.smallsteps.R;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -43,6 +46,10 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         if(v == mSearchButton) {
             String searchText = mSearchEditText.getText().toString().toLowerCase();
             String searchZip = mZipEditText.getText().toString();
+
+            if (!isValidSearchText(searchText) || !isValidSearchZip(searchZip)) {
+                return;
+            }
 
             if(!(isLocationSaved())) {
                 addToSharedPreferences(searchZip);
@@ -80,14 +87,23 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         return true;
     }
 
-    private boolean matchesSavedLocation(String location) {
-        String savedLocation = mLocationSharedPreferences.getString(Constants.PREFERENCES_LOCATION_KEY, null);
-
-        if(savedLocation.equals(location)) {
-            return true;
+    private boolean isValidSearchText(String searchText) {
+        if (searchText.equals("")) {
+            mSearchEditText.setError("Please enter a topic.");
+            return false;
         }
 
-        return false;
+        return true;
     }
 
+    private boolean isValidSearchZip(String searchZip) {
+        Pattern locationPattern = Pattern.compile(Constants.ZIP_REGEX);
+        Matcher locationMatcher = locationPattern.matcher(searchZip);
+        if(!(locationMatcher.matches())) {
+            mZipEditText.setError("Please enter a valid ZIP Code.");
+            return false;
+        }
+
+        return true;
+    }
 }
