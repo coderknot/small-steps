@@ -2,7 +2,7 @@
     <string name="app_name">Small Steps</string>
     <string name="app_background">App Background</string>
     <string name="menu_logout_title">Logout</string>
-    <string name="main_startButton_text">Start</string>
+    <string name="main_groupSearchButton_text">Group Search</string>
     <string name="main_aboutButton_text">About</string>
     <string name="main_habitsButton_text">Habits List</string>
     <string name="about_title">About</string>
