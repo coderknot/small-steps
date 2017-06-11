@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
-    @Bind(R.id.appNameTextView) TextView mAppNameTextView;
+    @Bind(R.id.mainAppNameTextView) TextView mMainAppNameTextView;
     @Bind(R.id.startButton) Button mStartButton;
     @Bind(R.id.aboutButton) Button mAboutButton;
     @Bind(R.id.habitsListButton) Button mHabitsListButton;
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
 
         Typeface appNameFont = Typeface.createFromAsset(getAssets(), "fonts/app_name.ttf");
-        mAppNameTextView.setTypeface(appNameFont);
+        mMainAppNameTextView.setTypeface(appNameFont);
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {

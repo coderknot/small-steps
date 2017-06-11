@@ -2,6 +2,7 @@ package com.epicodus.smallsteps.ui;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,6 +30,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private FirebaseAuth.AuthStateListener mAuthListener;
     private ProgressDialog mAuthProgressDialog;
 
+    @Bind(R.id.loginAppNameTextView) TextView mLoginAppNameTextView;
     @Bind(R.id.loginEmailEditText) EditText mLoginEmailEditText;
     @Bind(R.id.loginPasswordEditText) EditText mLoginPasswordEditText;
     @Bind(R.id.loginLoginButton) Button mLoginButton;
@@ -39,6 +41,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+
+        Typeface appNameFont = Typeface.createFromAsset(getAssets(), "fonts/app_name.ttf");
+        mLoginAppNameTextView.setTypeface(appNameFont);
 
         mAuth = FirebaseAuth.getInstance();
         createAuthStateListener();
