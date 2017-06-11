@@ -55,59 +55,89 @@
             android:paddingRight="30dp"
             android:paddingTop="10dp">
 
-            <EditText
-                android:id="@+id/registrationNameEditText"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:hint="@string/registration_registrationNameEditText_hint"
-                android:nextFocusDown="@+id/registrationEmailEditText"
-                android:padding="10dp"
-                android:layout_marginBottom="10dp"
-                android:textColor="@android:color/black"
-                android:textColorHint="@color/colorDivider"
-                android:textSize="20sp" />
+                android:theme="@style/TextLabel"
+                app:hintTextAppearance="@style/TextInputLayoutHint">
 
-            <EditText
-                android:id="@+id/registrationEmailEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:hint="@string/registration_registrationEmailEditText_hint"
-                android:inputType="textEmailAddress"
-                android:nextFocusDown="@+id/registrationPasswordEditText"
-                android:padding="10dp"
-                android:layout_marginBottom="10dp"
-                android:textColor="@android:color/black"
-                android:textColorHint="@color/colorDivider"
-                android:textSize="20sp" />
+                <EditText
+                    android:id="@+id/registrationNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="@string/registration_registrationNameEditText_hint"
+                    android:nextFocusDown="@+id/registrationEmailEditText"
+                    android:padding="10dp"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="20sp"
+                    android:background="@color/colorPrimaryDarkTransparent" />
 
-            <EditText
-                android:id="@+id/registrationPasswordEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:hint="@string/registration_registrationPasswordEditText_hint"
-                android:inputType="textPassword"
-                android:nextFocusDown="@+id/registrationConfirmPasswordEditText"
-                android:padding="10dp"
-                android:layout_marginBottom="10dp"
-                android:textColor="@android:color/black"
-                android:textColorHint="@color/colorDivider"
-                android:textSize="20sp" />
+            </android.support.design.widget.TextInputLayout>
 
-            <EditText
-                android:id="@+id/registrationConfirmPasswordEditText"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:hint="@string/registration_registrationConfirmPasswordEditText"
-                android:inputType="textPassword"
-                android:nextFocusDown="@+id/registrationSignUpButton"
-                android:padding="10dp"
-                android:textColor="@android:color/black"
-                android:textColorHint="@color/colorDivider"
-                android:textSize="20sp" />
+                android:theme="@style/TextLabel"
+                app:hintTextAppearance="@style/TextInputLayoutHint">
+
+                <EditText
+                    android:id="@+id/registrationEmailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="@string/registration_registrationEmailEditText_hint"
+                    android:inputType="textEmailAddress"
+                    android:nextFocusDown="@+id/registrationPasswordEditText"
+                    android:padding="10dp"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="20sp"
+                    android:background="@color/colorPrimaryDarkTransparent" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel"
+                app:hintTextAppearance="@style/TextInputLayoutHint">
+
+                <EditText
+                    android:id="@+id/registrationPasswordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="@string/registration_registrationPasswordEditText_hint"
+                    android:inputType="textPassword"
+                    android:nextFocusDown="@+id/registrationConfirmPasswordEditText"
+                    android:padding="10dp"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="20sp"
+                    android:background="@color/colorPrimaryDarkTransparent" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel"
+                app:hintTextAppearance="@style/TextInputLayoutHint">
+
+                <EditText
+                    android:id="@+id/registrationConfirmPasswordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="@string/registration_registrationConfirmPasswordEditText"
+                    android:inputType="textPassword"
+                    android:nextFocusDown="@+id/registrationSignUpButton"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/colorDivider"
+                    android:textSize="20sp"
+                    android:background="@color/colorPrimaryDarkTransparent" />
+
+            </android.support.design.widget.TextInputLayout>
 
             <Button
                 android:id="@+id/registrationSignUpButton"
