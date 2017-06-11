@@ -56,32 +56,46 @@
             android:paddingRight="30dp"
             android:paddingTop="10dp">
 
-            <EditText
-                android:id="@+id/loginEmailEditText"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:background="@android:color/white"
-                android:hint="@string/login_loginEmailEditText_hint"
-                android:inputType="textEmailAddress"
-                android:nextFocusDown="@+id/loginPasswordEditText"
-                android:padding="10dp"
-                android:textColor="@android:color/black"
-                android:textColorHint="@color/colorDivider"
-                android:textSize="20sp" />
+                android:theme="@style/TextLabel"
+                app:hintTextAppearance="@style/TextInputLayoutHint">
 
-            <EditText
-                android:id="@+id/loginPasswordEditText"
+                <EditText
+                    android:id="@+id/loginEmailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/login_loginEmailEditText_hint"
+                    android:inputType="textEmailAddress"
+                    android:nextFocusDown="@+id/loginPasswordEditText"
+                    android:padding="10dp"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="20sp"
+                    android:background="@color/colorPrimaryDarkTransparent"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:hint="@string/login_loginPasswordEditText_hint"
-                android:inputType="textPassword"
-                android:nextFocusDown="@+id/loginLoginButton"
-                android:padding="10dp"
-                android:textColor="@android:color/black"
-                android:textColorHint="@color/colorDivider"
-                android:textSize="20sp" />
+                android:theme="@style/TextLabel"
+                app:hintTextAppearance="@style/TextInputLayoutHint">
+
+                <EditText
+                    android:id="@+id/loginPasswordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="@string/login_loginPasswordEditText_hint"
+                    android:inputType="textPassword"
+                    android:nextFocusDown="@+id/loginLoginButton"
+                    android:padding="10dp"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="20sp"
+                    android:background="@color/colorPrimaryDarkTransparent" />
+
+            </android.support.design.widget.TextInputLayout>
 
             <Button
                 android:id="@+id/loginLoginButton"
