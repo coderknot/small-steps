@@ -28,7 +28,6 @@
         android:id="@+id/registrationAppNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/registrationTitleTextView"
         android:layout_gravity="center_horizontal"
         android:text="@string/app_name"
         android:textColor="@color/colorPrimaryText"
@@ -39,12 +38,12 @@
             android:id="@+id/registrationTitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/registrationFormlinearLayout"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:text="@string/registration_registrationTitleTextView_text"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:id="@+id/registrationFormLinearLayout"
