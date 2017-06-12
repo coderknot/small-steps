@@ -24,8 +24,8 @@
     </string>
     <string name="search_text_2">The Group Search finds groups from Meetup.com to find others pursuing the same interests or goals. Ideally, habits and groups will be linked and work together in a future release.
     </string>
-    <string name="search_searchEditText_hint">What do you want to learn or practice?</string>
-    <string name="search_zipEditText_hint">near your 5 digit ZIP Code</string>
+    <string name="search_searchEditText_hint">What you want to learn or practice</string>
+    <string name="search_zipEditText_hint">Your 5 digit ZIP Code</string>
     <string name="search_searchButton_text">Find Groups</string>
     <string name="habits_title">Habits</string>
     <string name="habits_habitNameEditText_hint">New Habit Name</string>
