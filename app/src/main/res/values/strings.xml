@@ -30,6 +30,8 @@
     <string name="habits_title">Habits</string>
     <string name="habits_habitNameEditText_hint">New Habit Name</string>
     <string name="habits_addHabitButton_text">Add Habit</string>
+    <string name="newHabit_title">New Habit</string>
+    <string name="newHabit_newHabitTitleEditText_hint">Title</string>
     <string name="login_loginTitleTextView_text">Account Login</string>
     <string name="login_loginEmailEditText_hint">Email</string>
     <string name="login_loginPasswordEditText_hint">Password</string>
