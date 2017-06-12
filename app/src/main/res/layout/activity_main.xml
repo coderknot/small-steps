@@ -27,27 +27,27 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/startButton"
+        android:id="@+id/habitsListButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:width="200dp"
-        android:background="@color/colorPrimary"
-        android:text="@string/main_startButton_text"
-        android:textColor="@color/colorPrimaryText" />
+        android:background="@drawable/button_transparent_with_border"
+        android:text="@string/main_habitsButton_text" />
 
     <Button
-        android:id="@+id/habitsListButton"
+        android:id="@+id/groupSearchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:width="200dp"
-        android:background="@drawable/button_transparent_with_border"
-        android:text="@string/main_habitsButton_text"
-        android:layout_below="@+id/startButton"
-        android:layout_alignLeft="@+id/startButton"
-        android:layout_alignStart="@+id/startButton"
+        android:background="@color/colorPrimary"
+        android:text="@string/main_groupSearchButton_text"
+        android:textColor="@color/colorPrimaryText"
+        android:layout_below="@+id/habitsListButton"
+        android:layout_alignLeft="@+id/habitsListButton"
+        android:layout_alignStart="@+id/habitsListButton"
         android:layout_marginTop="14dp" />
 
     <Button
@@ -58,9 +58,9 @@
         android:background="@color/colorPrimaryDark"
         android:text="@string/main_aboutButton_text"
         android:textColor="@color/colorPrimaryText"
-        android:layout_below="@+id/habitsListButton"
-        android:layout_alignLeft="@+id/habitsListButton"
-        android:layout_alignStart="@+id/habitsListButton"
+        android:layout_below="@+id/groupSearchButton"
+        android:layout_alignLeft="@+id/groupSearchButton"
+        android:layout_alignStart="@+id/groupSearchButton"
         android:layout_marginTop="14dp" />
 
 </RelativeLayout>

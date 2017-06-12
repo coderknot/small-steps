@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private FirebaseAuth.AuthStateListener mAuthListener;
 
     @Bind(R.id.mainAppNameTextView) TextView mMainAppNameTextView;
-    @Bind(R.id.startButton) Button mStartButton;
+    @Bind(R.id.groupSearchButton) Button mGroupSearchButton;
     @Bind(R.id.aboutButton) Button mAboutButton;
     @Bind(R.id.habitsListButton) Button mHabitsListButton;
 
@@ -50,9 +50,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         };
 
-        mStartButton.setOnClickListener(this);
-        mAboutButton.setOnClickListener(this);
         mHabitsListButton.setOnClickListener(this);
+        mGroupSearchButton.setOnClickListener(this);
+        mAboutButton.setOnClickListener(this);
     }
 
     @Override
@@ -97,13 +97,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if(v == mStartButton) {
-            Intent searchIntent = new Intent(MainActivity.this, SearchActivity.class);
-            startActivity(searchIntent);
-        }
         if(v == mHabitsListButton) {
             Intent habitsListIntenet = new Intent(MainActivity.this, HabitsListActivity.class);
             startActivity(habitsListIntenet);
+        }
+        if(v == mGroupSearchButton) {
+            Intent searchIntent = new Intent(MainActivity.this, SearchActivity.class);
+            startActivity(searchIntent);
         }
         if(v == mAboutButton) {
             Intent aboutIntent = new Intent(MainActivity.this, AboutActivity.class);

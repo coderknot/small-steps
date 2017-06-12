@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.epicodus.smallsteps.ui.HabitsListActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
 
     <ImageView
         android:id="@+id/mainBackgroundImageView"
@@ -18,37 +20,53 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="30dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/linearLayout">
+        android:id="@+id/newHabitlinearLayout">
 
-        <EditText
-            android:id="@+id/newHabitTitleEditText"
+        <TextView
+            android:id="@+id/newHabitTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="@string/newHabit_title"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/newHabitFormLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:hint="Title"
-            android:inputType="text"
-            android:nextFocusDown="@+id/newHabitCreateButton"
-            android:padding="10dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@android:color/black"
-            android:textColorHint="@color/colorDivider"
-            android:textSize="20sp" />
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="20dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel"
+                app:hintTextAppearance="@style/TextInputLayoutHint">
+
+                <EditText
+                    android:id="@+id/newHabitTitleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/newHabit_newHabitTitleEditText_hint"
+                    android:inputType="text"
+                    android:nextFocusDown="@+id/newHabitCreateButton"
+                    android:padding="10dp"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="20sp"
+                    android:background="@color/colorPrimaryDarkTransparent" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/newHabitTitleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Habit"
-        android:textColor="@color/colorPrimaryText"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_above="@+id/linearLayout"
-        android:layout_centerHorizontal="true" />
 
     <RelativeLayout
         android:layout_width="match_parent"
