@@ -10,6 +10,7 @@ public class Constants {
     public static final String MEETUP_API_QUERY_PARAMETER = "key";
 
     public static final String FIREBASE_CHILD_HABITS="habits";
+    public static final String FIREBASE_QUERY_INDEX = "index";
     public static final String PREFERENCES_LOCATION_KEY = "location";
     public static final String ZIP_REGEX = "^[0-9]{5}$";
 

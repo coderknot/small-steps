@@ -6,11 +6,13 @@ import org.parceler.Parcel;
 public class Habit {
     String title;
     String pushId;
+    String index;
 
     public Habit() { }
 
     public Habit(String title) {
         this.title = title;
+        this.index = "not_specified";
     }
 
     public String getTitle() {
@@ -23,5 +25,13 @@ public class Habit {
 
     public void setPushId(String pushId) {
         this.pushId = pushId;
+    }
+
+    public String getIndex() {
+        return this.index;
+    }
+
+    public void setIndex(String index) {
+        this.index = index;
     }
 }
