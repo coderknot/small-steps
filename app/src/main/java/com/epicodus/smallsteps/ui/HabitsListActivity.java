@@ -13,16 +13,15 @@ import com.epicodus.smallsteps.Constants;
 import com.epicodus.smallsteps.R;
 import com.epicodus.smallsteps.adapters.FirebaseHabitListAdapter;
 import com.epicodus.smallsteps.adapters.FirebaseHabitViewHolder;
-import com.epicodus.smallsteps.util.ItemTouchHelperAdapter;
 import com.epicodus.smallsteps.util.OnStartDragListener;
 import com.epicodus.smallsteps.util.SimpleItemTouchHelperCallback;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import com.epicodus.smallsteps.models.Habit;
+import com.google.firebase.database.Query;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -50,15 +49,16 @@ public class HabitsListActivity extends AppCompatActivity implements OnStartDrag
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String uid = user.getUid();
 
-        mHabitReference = FirebaseDatabase
+        Query query = FirebaseDatabase
                 .getInstance()
                 .getReference(Constants.FIREBASE_CHILD_HABITS)
-                .child(uid);
+                .child(uid)
+                .orderByChild(Constants.FIREBASE_QUERY_INDEX);
 
         mFirebaseHabitListAdapter = new FirebaseHabitListAdapter(Habit.class,
                                                                  R.layout.habit_list_item,
                                                                  FirebaseHabitViewHolder.class,
-                                                                 mHabitReference,
+                                                                 query,
                                                                  this,
                                                                  this);
 
