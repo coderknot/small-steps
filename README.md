@@ -1,6 +1,6 @@
 # Small Steps
 
-#### _An Android app focusing on habit building through small steps, Current Version: 05-26-2017_
+#### _An Android app focusing on habit building through small steps, Current Version: 06-14-2017_
 
 #### By _**John Carr**_
 
@@ -26,7 +26,6 @@ You will need the following things properly installed on your computer:
 * [Java SDK 1.8 Update 121 +](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Android Studio 2.3.2 +](https://developer.android.com/studio/index.html)
 
-
 ### Installation
 
 * `git clone <repository-url>` this repository
@@ -42,7 +41,10 @@ You will need the following things properly installed on your computer:
 | Users can add habits/steps | User enters Habit name | Habit is added to list |
 
 ## Known Issues/Bugs
-No known issues or bugs.
+
+| Issue No. | Date | Issue | Notes |
+|-----------|------|-------|-------|
+| 1.001 | 06/14/2017 | If habits are created AND deleted, app DOES crash upon exiting Habit List Activity | if habits are created AND sorted, app DOES NOT crash on exit |
 
 ## Technologies Used
 * _Android_
