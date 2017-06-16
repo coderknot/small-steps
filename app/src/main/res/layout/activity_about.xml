@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:text="@string/about_title"
-        android:textColor="@color/colorPrimaryText"
+        android:textColor="@color/colorPrimaryDarker"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -52,7 +52,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="20dp"
-        android:text="@string/about_text_3"
+        android:text="@string/about_text_3a"
         android:textColor="@color/colorPrimaryText" />
 
     <TextView
