@@ -11,7 +11,9 @@
     <string name="about_text_2">
         Small Steps aims to help you build habits by focusing on small steps. It is based on the ideas of The 3 R’s of Habit Change: Reminder, Routine, and Reward.
     </string>
-    <string name="about_text_3">A Reminder is the trigger that initiates the behavior.\n\nA Routine is the behavior, itself.\n\nA Reward is the benefit gained from performing the behavior.
+    <string name="about_text_3a">A Reminder is the trigger that initiates the behavior.\n\nA Routine is the behavior, itself.\n\nA Reward is the benefit gained from performing the behavior.
+    </string>
+    <string name="about_text_3b">A Reminder is the trigger that initiates the behavior.\nA Routine is the behavior, itself.\nA Reward is the benefit gained from performing the behavior.
     </string>
     <string name="about_text_4">
         This app uses Reminders to trigger Routines to earn Rewards.
