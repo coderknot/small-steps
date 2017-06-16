@@ -20,7 +20,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/registrationlinearLayout">
 
@@ -31,7 +31,7 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/app_name"
             android:textColor="@color/colorPrimaryText"
-            android:textSize="70sp"
+            android:textSize="50sp"
             android:textStyle="bold" />
 
         <TextView
@@ -39,11 +39,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="8dp"
             android:text="@string/registration_registrationTitleTextView_text"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/registrationLoginTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="0dp"
+            android:textColor="@color/colorPrimaryText"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:text="@string/registration_registrationLoginTextView_text" />
 
         <LinearLayout
             android:id="@+id/registrationFormLinearLayout"
@@ -51,8 +62,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingLeft="30dp"
-            android:paddingRight="30dp"
-            android:paddingTop="10dp">
+            android:paddingRight="30dp">
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -64,12 +74,12 @@
                     android:id="@+id/registrationNameEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="6dp"
                     android:hint="@string/registration_registrationNameEditText_hint"
                     android:nextFocusDown="@+id/registrationEmailEditText"
-                    android:padding="10dp"
+                    android:padding="6dp"
                     android:textColor="@color/colorPrimaryLight"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:background="@color/colorPrimaryDarkTransparent" />
 
             </android.support.design.widget.TextInputLayout>
@@ -84,13 +94,13 @@
                     android:id="@+id/registrationEmailEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="6dp"
                     android:hint="@string/registration_registrationEmailEditText_hint"
                     android:inputType="textEmailAddress"
                     android:nextFocusDown="@+id/registrationPasswordEditText"
-                    android:padding="10dp"
+                    android:padding="6dp"
                     android:textColor="@color/colorPrimaryLight"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:background="@color/colorPrimaryDarkTransparent" />
 
             </android.support.design.widget.TextInputLayout>
@@ -105,13 +115,13 @@
                     android:id="@+id/registrationPasswordEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="6dp"
                     android:hint="@string/registration_registrationPasswordEditText_hint"
                     android:inputType="textPassword"
                     android:nextFocusDown="@+id/registrationConfirmPasswordEditText"
-                    android:padding="10dp"
+                    android:padding="6dp"
                     android:textColor="@color/colorPrimaryLight"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:background="@color/colorPrimaryDarkTransparent" />
 
             </android.support.design.widget.TextInputLayout>
@@ -126,41 +136,37 @@
                     android:id="@+id/registrationConfirmPasswordEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="6dp"
                     android:hint="@string/registration_registrationConfirmPasswordEditText"
                     android:inputType="textPassword"
                     android:nextFocusDown="@+id/registrationSignUpButton"
-                    android:padding="10dp"
+                    android:padding="6dp"
                     android:textColor="@android:color/black"
                     android:textColorHint="@color/colorDivider"
-                    android:textSize="20sp"
-                    android:background="@color/colorPrimaryDarkTransparent" />
+                    android:textSize="18sp"
+                    android:background="@color/colorPrimaryDarkTransparent"
+                    android:layout_marginBottom="6dp"/>
 
             </android.support.design.widget.TextInputLayout>
-
-            <Button
-                android:id="@+id/registrationSignUpButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="@string/registration_registrationSignUpButton_text"
-                android:background="@color/colorPrimaryDark"
-                android:layout_marginTop="15dp"
-                android:textColor="@color/colorAccent" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:textColor="@color/colorPrimaryText"
-                android:textStyle="bold"
-                android:textSize="15sp"
-                android:text="@string/registration_registrationLoginTextView_text"
-                android:id="@+id/registrationLoginTextView"
-                android:layout_gravity="center_horizontal" />
 
         </LinearLayout>
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/registrationSignUpButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/registration_registrationSignUpButton_text"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorAccent" />
+
+    </RelativeLayout>
 
 </RelativeLayout>
