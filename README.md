@@ -40,11 +40,22 @@ You will need the following things properly installed on your computer:
 | Users can view a list of habits/steps | User navigates to Habits Activity | Habits List is displayed |
 | Users can add habits/steps | User enters Habit name | Habit is added to list |
 
-## Known Issues/Bugs
+### Known Issues/Bugs
 
 | Issue No. | Date | Issue | Notes |
 |-----------|------|-------|-------|
 | 1.001 | 06/14/2017 | If habits are created AND deleted, app DOES crash upon exiting Habit List Activity | if habits are created AND sorted, app DOES NOT crash on exit |
+
+### TO-DO
+* Fix habit list issue (Issue No. 1.001)
+* Layouts:
+  * Vertical
+  * Landscape
+  * Possible "Back" button in layout, instead of app bar?
+* Update README:
+  * New Screenshots
+  * Planning and Specifications
+
 
 ## Technologies Used
 * _Android_
