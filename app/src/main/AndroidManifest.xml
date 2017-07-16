@@ -40,11 +40,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.smallsteps.ui.MainActivity" />
         </activity>
-        <activity android:name=".ui.HabitsActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.epicodus.smallsteps.ui.MainActivity" />
-        </activity>
         <activity android:name=".ui.SearchActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
