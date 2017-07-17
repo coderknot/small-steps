@@ -46,4 +46,10 @@
     <string name="registration_registrationConfirmPasswordEditText">Confirm Password</string>
     <string name="registration_registrationSignUpButton_text">Sign Up</string>
     <string name="registration_registrationLoginTextView_text">Already have an account? Log in here!</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>
