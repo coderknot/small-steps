@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         int menuId = menuItem.getItemId();
-        if (menuId == R.id.action_logout) {
+        if (menuId == R.id.action_logout_old) {
             logout();
             return true;
         }

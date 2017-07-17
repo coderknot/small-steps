@@ -86,7 +86,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 final FirebaseUser user = firebaseAuth.getCurrentUser();
 
                 if(user != null) {
-                    Intent authStateIntent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent authStateIntent = new Intent(LoginActivity.this, Main2Activity.class);
                     authStateIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(authStateIntent);
                 }
