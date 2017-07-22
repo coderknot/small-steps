@@ -55,7 +55,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.smallsteps.ui.MainActivity" />
         </activity>
-        <activity android:name=".ui.NewHabitActivity" />
+        <activity android:name=".ui.NewHabitActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.epicodus.smallsteps.ui.Main2Activity" />
+        </activity>
         <activity
             android:name=".ui.Main2Activity"
             android:theme="@style/AppTheme.NoActionBar" />
