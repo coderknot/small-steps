@@ -44,19 +44,26 @@ public class HabitsListFragment extends Fragment implements View.OnClickListener
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ButterKnife.bind(getActivity());
+        View view = inflater.inflate(R.layout.fragment_habits_list, container, false);
+        ButterKnife.bind(this, view);
 
         setUpFirebaseRecyclerAdapter();
 
         mHabitsListNewHabitButton.setOnClickListener(this);
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_habits_list, container, false);
+//        return inflater.inflate(R.layout.fragment_habits_list, container, false);
+        return view;
     }
 
     private void setUpFirebaseRecyclerAdapter() {
-//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-//        String uid = user.getUid();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String uid = user.getUid();
+
+        mHabitReference = FirebaseDatabase
+                .getInstance()
+                .getReference(Constants.FIREBASE_CHILD_HABITS)
+                .child(uid);
 //
 //        Query query = FirebaseDatabase
 //                .getInstance()
