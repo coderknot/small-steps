@@ -38,6 +38,10 @@ public class HabitsListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_habits_list, container, false);
         ButterKnife.bind(this, view);
 
+        if(getActivity() instanceof Main2Activity) {
+            ((Main2Activity) getActivity()).showFloatingActionButton();
+        }
+
         setUpFirebaseRecyclerAdapter();
 
         return view;
