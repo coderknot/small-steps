@@ -20,8 +20,6 @@ import java.util.Collections;
 
 public class FirebaseHabitListAdapter extends FirebaseRecyclerAdapter<Habit, FirebaseHabitViewHolder> /*implements ItemTouchHelperAdapter*/ {
     private DatabaseReference mRef;
-//    private OnStartDragListener mOnStartDragListener;
-//    private Context mContext;
     private ChildEventListener mChildEventListener;
     private ArrayList<Habit> mHabits = new ArrayList<>();
 
@@ -29,69 +27,17 @@ public class FirebaseHabitListAdapter extends FirebaseRecyclerAdapter<Habit, Fir
                                     int modelLayout,
                                     Class<FirebaseHabitViewHolder> viewHolderClass,
                                     Query ref) {
-    //,
-//                                    OnStartDragListener onStartDragListener,
-//                                    Context context) {
         super(modelClass, modelLayout, viewHolderClass, ref);
         this.mRef = ref.getRef();
-//        this.mOnStartDragListener = onStartDragListener;
-//        this.mContext = context;
 
-//        mChildEventListener = mRef.addChildEventListener(new ChildEventListener() {
-//            @Override
-//            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-//                mHabits.add(dataSnapshot.getValue(Habit.class));
-//            }
-//
-//            @Override
-//            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-//
-//            }
-//
-//            @Override
-//            public void onChildRemoved(DataSnapshot dataSnapshot) {
-//
-//            }
-//
-//            @Override
-//            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
-//        });
     }
 
     @Override
     protected void populateViewHolder(final FirebaseHabitViewHolder habitViewHolder, Habit habitModel, int position) {
-        habitViewHolder.bindHabit(habitModel);
-//        habitViewHolder.mHabitDragIconImageView.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View view, MotionEvent motionEvent) {
-//                if(MotionEventCompat.getActionMasked(motionEvent) == MotionEvent.ACTION_DOWN) {
-//                    mOnStartDragListener.onStartDrag(habitViewHolder);
-//                }
-//
-//                return false;
-//            }
-//        });
+//        habitViewHolder.bindHabit(habitModel);
     }
 
-//    @Override
-//    public boolean onItemMove(int fromPosition, int toPosition) {
-//        Collections.swap(mHabits, fromPosition, toPosition);
-//        notifyItemMoved(fromPosition, toPosition);
-//        return false;
-//    }
-//
-//    @Override
-//    public void onItemDismiss(int position) {
-//        mHabits.remove(position);
-//        getRef(position).removeValue();
-//    }
+
 
     @Override
     public void cleanup() {
@@ -99,13 +45,5 @@ public class FirebaseHabitListAdapter extends FirebaseRecyclerAdapter<Habit, Fir
 //        setIndexInFirebase();
 //        mRef.removeEventListener(mChildEventListener);
     }
-//
-//    private void setIndexInFirebase() {
-//        for(Habit habit : mHabits) {
-//            int index = mHabits.indexOf(habit);
-//            DatabaseReference ref = getRef(index);
-//            habit.setIndex(Integer.toString(index));
-//            ref.setValue(habit);
-//        }
-//    }
+
 }
