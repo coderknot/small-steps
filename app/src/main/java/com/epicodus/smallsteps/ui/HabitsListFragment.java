@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.epicodus.smallsteps.Constants;
 import com.epicodus.smallsteps.R;
+import com.epicodus.smallsteps.adapters.FirebaseHabitListAdapter;
 import com.epicodus.smallsteps.adapters.FirebaseHabitViewHolder;
 import com.epicodus.smallsteps.models.Habit;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -21,16 +22,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class HabitsListFragment extends Fragment implements View.OnClickListener {
+public class HabitsListFragment extends Fragment /*implements View.OnClickListener*/ {
     private DatabaseReference mHabitReference;
     private FirebaseRecyclerAdapter mFirebaseRecyclerAdapter;
+    private FirebaseHabitListAdapter mFirebaseHabitListAdapter;
 
     @Bind(R.id.habitsRecyclerView) RecyclerView mHabitsRecyclerView;
 
     public HabitsListFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -52,28 +53,32 @@ public class HabitsListFragment extends Fragment implements View.OnClickListener
                 .getReference(Constants.FIREBASE_CHILD_HABITS)
                 .child(uid);
 
-        mFirebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Habit, FirebaseHabitViewHolder>
-                (Habit.class, R.layout.habit_list_item, FirebaseHabitViewHolder.class, mHabitReference) {
-            @Override
-            public void populateViewHolder(FirebaseHabitViewHolder habitViewHolder, Habit habit, int position) {
-                habitViewHolder.bindHabit(habit);
-            }
-        };
+        mFirebaseHabitListAdapter = new FirebaseHabitListAdapter(Habit.class, R.layout.habit_list_item, FirebaseHabitViewHolder.class, mHabitReference);
+
+//        mFirebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Habit, FirebaseHabitViewHolder>
+//                (Habit.class, R.layout.habit_list_item, FirebaseHabitViewHolder.class, mHabitReference) {
+//            @Override
+//            public void populateViewHolder(FirebaseHabitViewHolder habitViewHolder, Habit habit, int position) {
+//                habitViewHolder.bindHabit(habit);
+//            }
+//        };
 
         mHabitsRecyclerView.setHasFixedSize(true);
         mHabitsRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        mHabitsRecyclerView.setAdapter(mFirebaseRecyclerAdapter);
+//        mHabitsRecyclerView.setAdapter(mFirebaseRecyclerAdapter);
+        mHabitsRecyclerView.setAdapter(mFirebaseHabitListAdapter);
     }
 
-    @Override
-    public void onClick(View v) {
-
-    }
+//    @Override
+//    public void onClick(View v) {
+//
+//    }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mFirebaseRecyclerAdapter.cleanup();
+//        mFirebaseRecyclerAdapter.cleanup();
+        mFirebaseHabitListAdapter.cleanup();
     }
 
 }
