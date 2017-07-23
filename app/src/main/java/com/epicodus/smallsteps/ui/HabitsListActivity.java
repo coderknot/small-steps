@@ -55,20 +55,20 @@ public class HabitsListActivity extends AppCompatActivity implements OnStartDrag
                 .child(uid)
                 .orderByChild(Constants.FIREBASE_QUERY_INDEX);
 
-        mFirebaseHabitListAdapter = new FirebaseHabitListAdapter(Habit.class,
-                                                                 R.layout.habit_list_item,
-                                                                 FirebaseHabitViewHolder.class,
-                                                                 query,
-                                                                 this,
-                                                                 this);
-
-        mHabitsRecyclerView.setHasFixedSize(true);
-        mHabitsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mHabitsRecyclerView.setAdapter(mFirebaseHabitListAdapter);
-
-        ItemTouchHelper.Callback callback = new SimpleItemTouchHelperCallback(mFirebaseHabitListAdapter);
-        mItemTouchHolder = new ItemTouchHelper(callback);
-        mItemTouchHolder.attachToRecyclerView(mHabitsRecyclerView);
+//        mFirebaseHabitListAdapter = new FirebaseHabitListAdapter(Habit.class,
+//                                                                 R.layout.habit_list_item,
+//                                                                 FirebaseHabitViewHolder.class,
+//                                                                 query,
+//                                                                 this,
+//                                                                 this);
+//
+//        mHabitsRecyclerView.setHasFixedSize(true);
+//        mHabitsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        mHabitsRecyclerView.setAdapter(mFirebaseHabitListAdapter);
+//
+//        ItemTouchHelper.Callback callback = new SimpleItemTouchHelperCallback(mFirebaseHabitListAdapter);
+//        mItemTouchHolder = new ItemTouchHelper(callback);
+//        mItemTouchHolder.attachToRecyclerView(mHabitsRecyclerView);
     }
 
     @Override
