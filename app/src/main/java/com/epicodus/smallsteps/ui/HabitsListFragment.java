@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.epicodus.smallsteps.Constants;
 import com.epicodus.smallsteps.R;
@@ -19,6 +18,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import org.parceler.Parcels;
+
+import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -57,9 +60,12 @@ public class HabitsListFragment extends Fragment {
                 .child(uid);
 
         FirebaseRecyclerAdapter<Habit, FirebaseHabitViewHolder> adapter = new FirebaseRecyclerAdapter<Habit, FirebaseHabitViewHolder>(Habit.class, R.layout.habit_list_item, FirebaseHabitViewHolder.class, mHabitReference) {
+            ArrayList<Habit> habitsList = new ArrayList<Habit>();
+
             @Override
             protected void populateViewHolder(FirebaseHabitViewHolder viewHolder, Habit model, int position) {
                 viewHolder.habitTitleTextView.setText(model.getTitle());
+                habitsList.add(model);
             }
 
             @Override
@@ -68,10 +74,15 @@ public class HabitsListFragment extends Fragment {
                 firebaseHabitViewHolder.setOnClickListener(new FirebaseHabitViewHolder.ClickListener() {
                     @Override
                     public void onItemClick(View v, int position) {
-                        Toast.makeText(getActivity(), "Item clicked at " + position, Toast.LENGTH_SHORT).show();
+                        Habit habit = habitsList.get(position);
 
+                        Bundle bundle = new Bundle();
+                        bundle.putParcelable("Habit", Parcels.wrap(habit));
+
+                        HabitDetailFragment habitDetailFragment = new HabitDetailFragment();
+                        habitDetailFragment.setArguments(bundle);
                         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.content_frame, new HabitDetailFragment());
+                        fragmentTransaction.replace(R.id.content_frame, habitDetailFragment);
                         fragmentTransaction.commit();
                     }
                 });
