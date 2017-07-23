@@ -1,60 +1,34 @@
 package com.epicodus.smallsteps.adapters;
 
-import android.animation.AnimatorInflater;
-import android.animation.AnimatorSet;
-import android.content.Context;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.support.v4.app.FragmentTransaction;
-import android.widget.Toast;
 
 import com.epicodus.smallsteps.R;
-import com.epicodus.smallsteps.models.Habit;
-import com.epicodus.smallsteps.util.ItemTouchHelperViewHolder;
 
-public class FirebaseHabitViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener /* implements ItemTouchHelperViewHolder */ {
-    public ImageView mHabitDragIconImageView;
-    View itemView;
-    Context context;
+public class FirebaseHabitViewHolder extends RecyclerView.ViewHolder {
+    private FirebaseHabitViewHolder.ClickListener mClickListener;
+    public TextView habitTitleTextView;
 
     public FirebaseHabitViewHolder(View itemView) {
         super(itemView);
-        this.itemView = itemView;
-        this.context = itemView.getContext();
+
+        habitTitleTextView = (TextView) itemView.findViewById(R.id.habitTitleTextView);
+
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mClickListener.onItemClick(v, getAdapterPosition());
+            }
+        });
     }
 
-    public void bindHabit(Habit habit) {
-        TextView habitTitleTextView = (TextView) this.itemView.findViewById(R.id.habitTitleTextView);
-//        mHabitDragIconImageView = (ImageView) this.itemView.findViewById(R.id.habitDragIconImageView);
-
-        habitTitleTextView.setText(habit.getTitle());
+    public interface ClickListener {
+        public void onItemClick(View v, int position);
     }
 
-    @Override
-    public void onClick(View v) {
-        Log.v("FirebaseHabitViewHolder", "onClick()");
-        int position = getLayoutPosition();
-        Log.v("FirebaseHabitViewHolder", String.valueOf(position));
+    public void setOnClickListener(FirebaseHabitViewHolder.ClickListener clickListener) {
+        mClickListener = clickListener;
     }
 
-//    @Override
-//    public void onItemSelected() {
-//        AnimatorSet set = (AnimatorSet) AnimatorInflater.loadAnimator(context,
-//                R.animator.drag_scale_on);
-//        set.setTarget(itemView);
-//        set.start();
-//    }
-//
-//    @Override
-//    public void onItemClear() {
-//        AnimatorSet set = (AnimatorSet) AnimatorInflater.loadAnimator(context,
-//                R.animator.drag_scale_off);
-//        set.setTarget(itemView);
-//        set.start();
-//    }
 }
