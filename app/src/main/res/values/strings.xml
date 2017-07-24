@@ -29,16 +29,21 @@
     <string name="search_searchEditText_hint">What you want to learn or practice</string>
     <string name="search_zipEditText_hint">Your 5 digit ZIP Code</string>
     <string name="search_searchButton_text">Find Groups</string>
+
     <string name="habits_title">Habits</string>
     <string name="habits_habitNameEditText_hint">New Habit Name</string>
     <string name="habits_addHabitButton_text">Add Habit</string>
+
     <string name="newHabit_title">New Habit</string>
     <string name="newHabit_newHabitTitleEditText_hint">Title</string>
+    <string name="newHabit_newHabitReasonEditText_hint">Reason (Optional)</string>
+
     <string name="login_loginTitleTextView_text">Account Login</string>
     <string name="login_loginEmailEditText_hint">Email</string>
     <string name="login_loginPasswordEditText_hint">Password</string>
     <string name="login_loginLoginButton_text">Log In</string>
     <string name="login_loginRegistrationTextView_text">Don\'t have an account? Sign up here!</string>
+
     <string name="registration_registrationTitleTextView_text">Account Registration</string>
     <string name="registration_registrationNameEditText_hint">Name</string>
     <string name="registration_registrationEmailEditText_hint">Email</string>
@@ -46,6 +51,7 @@
     <string name="registration_registrationConfirmPasswordEditText">Confirm Password</string>
     <string name="registration_registrationSignUpButton_text">Sign Up</string>
     <string name="registration_registrationLoginTextView_text">Already have an account? Log in here!</string>
+
     <string name="title_activity_main2">Main2Activity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -53,6 +59,4 @@
 
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
