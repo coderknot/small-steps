@@ -20,6 +20,7 @@ public class HabitDetailFragment extends Fragment {
     Habit habit;
 
     @Bind(R.id.habitDetailTitleTextView) TextView mHabitDetailTitleTextView;
+    @Bind(R.id.habitDetailReasonTextView) TextView mHabitDetailReasonTextView;
 
     public HabitDetailFragment() {
         // Required empty public constructor
@@ -44,6 +45,7 @@ public class HabitDetailFragment extends Fragment {
 
         Toast.makeText(getActivity(), "Passed Habit: " + habit.getTitle(), Toast.LENGTH_SHORT).show();
         mHabitDetailTitleTextView.setText(habit.getTitle());
+        mHabitDetailReasonTextView.setText("Reason: ".concat(habit.getReason()));
 
         // Inflate the layout for this fragment
         return view;
