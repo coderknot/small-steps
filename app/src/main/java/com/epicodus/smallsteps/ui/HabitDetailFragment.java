@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.epicodus.smallsteps.R;
@@ -12,8 +13,13 @@ import com.epicodus.smallsteps.models.Habit;
 
 import org.parceler.Parcels;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class HabitDetailFragment extends Fragment {
     Habit habit;
+
+    @Bind(R.id.habitDetailTitleTextView) TextView mHabitDetailTitleTextView;
 
     public HabitDetailFragment() {
         // Required empty public constructor
@@ -29,16 +35,18 @@ public class HabitDetailFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_habit_detail, container, false);
+        ButterKnife.bind(this, view);
 
         if(getActivity() instanceof Main2Activity) {
             ((Main2Activity) getActivity()).hideFloatingActionButton();
         }
 
         Toast.makeText(getActivity(), "Passed Habit: " + habit.getTitle(), Toast.LENGTH_SHORT).show();
-
+        mHabitDetailTitleTextView.setText(habit.getTitle());
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_habit_detail, container, false);
+        return view;
     }
 
 }
