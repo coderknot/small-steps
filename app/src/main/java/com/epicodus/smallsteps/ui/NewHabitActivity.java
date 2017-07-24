@@ -21,6 +21,7 @@ import butterknife.ButterKnife;
 
 public class NewHabitActivity extends AppCompatActivity implements View.OnClickListener{
     @Bind(R.id.newHabitTitleEditText) EditText mNewHabitTitleEditText;
+    @Bind(R.id.newHabitReasonEditText) EditText mNewHabitReasonEditText;
     @Bind(R.id.newHabitCreateButton) Button mNewHabitCreateButton;
 
     @Override
@@ -36,10 +37,11 @@ public class NewHabitActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         if(v == mNewHabitCreateButton) {
             String newHabitTitle = mNewHabitTitleEditText.getText().toString();
+            String newHabitReason = mNewHabitReasonEditText.getText().toString();
 
             if(!isValidTitle(newHabitTitle)) return;
 
-            createNewHabit(newHabitTitle);
+            createNewHabit(newHabitTitle, newHabitReason);
 
             Intent habitsListIntent = new Intent(NewHabitActivity.this, Main2Activity.class);
 //            habitsListIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -57,8 +59,13 @@ public class NewHabitActivity extends AppCompatActivity implements View.OnClickL
         return true;
     }
 
-    private void createNewHabit(String habitTitle) {
-        Habit newHabit = new Habit(habitTitle);
+    private void createNewHabit(String habitTitle, String habitReason) {
+        Habit newHabit;
+        if(habitReason.equals("")) {
+            newHabit = new Habit(habitTitle);
+        } else {
+            newHabit = new Habit(habitTitle, habitReason);
+        }
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String uid = user.getUid();
