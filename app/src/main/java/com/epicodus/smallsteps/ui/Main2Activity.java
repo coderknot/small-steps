@@ -52,6 +52,7 @@ public class Main2Activity extends AppCompatActivity
         // Set initial fragment
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.content_frame, new HabitsListFragment());
+//        fragmentTransaction.addToBackStack("habitsList");
         fragmentTransaction.commit();
 
         mAuth = FirebaseAuth.getInstance();
@@ -133,6 +134,7 @@ public class Main2Activity extends AppCompatActivity
         if (id == R.id.nav_all_habits) {
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.content_frame, new HabitsListFragment());
+            fragmentTransaction.addToBackStack("habitsList");
             fragmentTransaction.commit();
         } else if (id == R.id.nav_new_habits) {
             startActivity(new Intent(Main2Activity.this, NewHabitActivity.class));

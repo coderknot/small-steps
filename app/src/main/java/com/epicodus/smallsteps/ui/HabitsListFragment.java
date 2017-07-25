@@ -83,6 +83,7 @@ public class HabitsListFragment extends Fragment {
                         habitDetailFragment.setArguments(bundle);
                         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.content_frame, habitDetailFragment);
+                        fragmentTransaction.addToBackStack("habitDetail");
                         fragmentTransaction.commit();
                     }
                 });
