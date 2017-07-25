@@ -43,9 +43,8 @@ public class HabitDetailFragment extends Fragment {
             ((Main2Activity) getActivity()).hideFloatingActionButton();
         }
 
-        Toast.makeText(getActivity(), "Passed Habit: " + habit.getTitle(), Toast.LENGTH_SHORT).show();
         mHabitDetailTitleTextView.setText(habit.getTitle());
-        mHabitDetailReasonTextView.setText("Reason: ".concat(habit.getReason()));
+        mHabitDetailReasonTextView.setText(habit.getReason());
 
         // Inflate the layout for this fragment
         return view;
