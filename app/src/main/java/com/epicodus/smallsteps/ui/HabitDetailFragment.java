@@ -3,10 +3,11 @@ package com.epicodus.smallsteps.ui;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.epicodus.smallsteps.R;
 import com.epicodus.smallsteps.models.Habit;
@@ -24,11 +25,15 @@ public class HabitDetailFragment extends Fragment {
 
     public HabitDetailFragment() {
         // Required empty public constructor
+        setHasOptionsMenu(true);
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setHasOptionsMenu(true);
+
         habit = Parcels.unwrap(getArguments().getParcelable("Habit"));
     }
 
@@ -48,6 +53,13 @@ public class HabitDetailFragment extends Fragment {
 
         // Inflate the layout for this fragment
         return view;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
+//        menu.clear();
+        menuInflater.inflate(R.menu.menu_habit_detail, menu);
+        super.onCreateOptionsMenu(menu, menuInflater);
     }
 
 }
