@@ -98,11 +98,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(v == mHabitsListButton) {
-            Intent habitsListIntenet = new Intent(MainActivity.this, HabitsListActivity.class);
+            Intent habitsListIntenet = new Intent(MainActivity.this, AboutActivity.class);
             startActivity(habitsListIntenet);
         }
         if(v == mGroupSearchButton) {
-            Intent searchIntent = new Intent(MainActivity.this, SearchActivity.class);
+            Intent searchIntent = new Intent(MainActivity.this, AboutActivity.class);
             startActivity(searchIntent);
         }
         if(v == mAboutButton) {
