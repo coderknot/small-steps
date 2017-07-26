@@ -57,7 +57,6 @@ public class HabitDetailFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
-//        menu.clear();
         menuInflater.inflate(R.menu.menu_habit_detail, menu);
         super.onCreateOptionsMenu(menu, menuInflater);
     }

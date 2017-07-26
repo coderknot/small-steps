@@ -60,7 +60,7 @@ public class HabitsListFragment extends Fragment {
                 .child(uid);
 
         FirebaseRecyclerAdapter<Habit, FirebaseHabitViewHolder> adapter = new FirebaseRecyclerAdapter<Habit, FirebaseHabitViewHolder>(Habit.class, R.layout.habit_list_item, FirebaseHabitViewHolder.class, mHabitReference) {
-            ArrayList<Habit> habitsList = new ArrayList<Habit>();
+            ArrayList<Habit> habitsList = new ArrayList<>();
 
             @Override
             protected void populateViewHolder(FirebaseHabitViewHolder viewHolder, Habit model, int position) {

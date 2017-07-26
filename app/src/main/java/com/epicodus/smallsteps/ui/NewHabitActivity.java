@@ -44,9 +44,7 @@ public class NewHabitActivity extends AppCompatActivity implements View.OnClickL
             createNewHabit(newHabitTitle, newHabitReason);
 
             Intent habitsListIntent = new Intent(NewHabitActivity.this, Main2Activity.class);
-//            habitsListIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(habitsListIntent);
-//            finish();
         }
     }
 
