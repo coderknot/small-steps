@@ -7,101 +7,176 @@
     android:background="@color/colorPrimaryLight"
     tools:context="com.epicodus.smallsteps.ui.AboutActivity">
 
-    <TextView
-        android:id="@+id/aboutTextView"
+    <ImageView
+        android:id="@+id/mainBackgroundImageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="@string/about_title"
-        android:textColor="@color/colorPrimaryDarker"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/main_background"
+        android:contentDescription="@string/app_background" />
 
-    <TextView
-        android:id="@+id/summaryTextView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/aboutTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/about_text_1"
-        android:textColor="@color/colorPrimaryText" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/summaryTextView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/summaryTextView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/about_text_2"
-        android:textColor="@color/colorPrimaryText" />
+        <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
 
-    <TextView
-        android:id="@+id/summaryTextView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/summaryTextView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/about_text_3a"
-        android:textColor="@color/colorPrimaryText" />
+            <TextView
+                android:id="@+id/summaryTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutTextView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/about_text_1"
+                android:textColor="@color/colorPrimaryText" />
 
-    <TextView
-        android:id="@+id/summaryTextView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/summaryTextView3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/about_text_4"
-        android:textColor="@color/colorPrimaryText" />
+        </android.support.v7.widget.CardView>
 
-    <TextView
-        android:id="@+id/summaryTextView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/summaryTextView4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/about_text_5"
-        android:textColor="@color/colorPrimaryText" />
+        <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
 
-    <Button
-        android:id="@+id/githubButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/summaryTextView5"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:width="200dp"
-        android:background="@color/colorPrimary"
-        android:textColor="@color/colorPrimaryText"
-        android:text="@string/about_githubButton_text" />
+            <TextView
+                android:id="@+id/summaryTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/summaryTextView1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/about_text_2"
+                android:textColor="@color/colorPrimaryText" />
 
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:width="200dp"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@color/colorPrimaryText"
-        android:text="@string/about_backButton_text" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="140dp">
+
+            <TextView
+                android:id="@+id/summaryTextView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/summaryTextView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/about_text_3a"
+                android:textColor="@color/colorPrimaryText" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/summaryTextView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/about_text_4"
+                    android:textColor="@color/colorPrimaryText" />
+
+                <TextView
+                    android:id="@+id/summaryTextView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/about_text_5"
+                    android:textColor="@color/colorPrimaryText" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--<android.support.v7.widget.CardView-->
+            <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+            <!--android:layout_margin="8dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="120dp">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/summaryTextView5"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/summaryTextView4"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginLeft="30dp"-->
+                <!--android:layout_marginRight="30dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:text="@string/about_text_5"-->
+                <!--android:textColor="@color/colorPrimaryText" />-->
+
+        <!--</android.support.v7.widget.CardView>-->
+
+    </LinearLayout>
+
+    <!--<TextView-->
+        <!--android:id="@+id/aboutTextView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:text="@string/about_title"-->
+        <!--android:textColor="@color/colorPrimaryDarker"-->
+        <!--android:textSize="30sp"-->
+        <!--android:textStyle="bold" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/githubButton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/summaryTextView5"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:width="200dp"-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--android:textColor="@color/colorPrimaryText"-->
+        <!--android:text="@string/about_githubButton_text" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/backButton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:width="200dp"-->
+        <!--android:background="@color/colorPrimaryDark"-->
+        <!--android:textColor="@color/colorPrimaryText"-->
+        <!--android:text="@string/about_backButton_text" />-->
 
 </RelativeLayout>
