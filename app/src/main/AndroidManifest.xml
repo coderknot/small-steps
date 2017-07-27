@@ -34,23 +34,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.smallsteps.ui.LoginActivity" />
         </activity>
-        <activity android:name=".ui.MainActivity" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ui.AboutActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.epicodus.smallsteps.ui.MainActivity" />
-        </activity>
-        <activity android:name=".ui.SearchActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.epicodus.smallsteps.ui.MainActivity" />
-        </activity>
-        <activity android:name=".ui.GroupListActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.epicodus.smallsteps.ui.SearchActivity" />
-        </activity>
-        <activity android:name=".ui.HabitsListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.smallsteps.ui.MainActivity" />
@@ -58,11 +45,8 @@
         <activity android:name=".ui.NewHabitActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.epicodus.smallsteps.ui.Main2Activity" />
+                android:value="com.epicodus.smallsteps.ui.MainActivity" />
         </activity>
-        <activity
-            android:name=".ui.Main2Activity"
-            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

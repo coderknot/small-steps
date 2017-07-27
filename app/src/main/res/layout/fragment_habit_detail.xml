@@ -78,7 +78,7 @@
                         android:id="@+id/habitDetailReasonTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Habit Reason"
+                        android:text="@string/habitDetail_habitDetailReasonTextView_text"
                         android:textColor="@color/colorPrimaryDarker"
                         android:textSize="20sp"
                         android:textAlignment="center"

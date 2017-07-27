@@ -22,7 +22,7 @@
                 android:id="@+id/habitTitleTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Habit Name"
+                android:text="@string/habitList_habitTitleTextView_text"
                 android:textColor="@color/colorPrimaryDarker"
                 android:textSize="30sp"
                 android:textStyle="bold"

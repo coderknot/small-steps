@@ -44,8 +44,8 @@ public class HabitDetailFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_habit_detail, container, false);
         ButterKnife.bind(this, view);
 
-        if(getActivity() instanceof Main2Activity) {
-            ((Main2Activity) getActivity()).hideFloatingActionButton();
+        if(getActivity() instanceof MainActivity) {
+            ((MainActivity) getActivity()).hideFloatingActionButton();
         }
 
         mHabitDetailTitleTextView.setText(habit.getTitle());
@@ -57,7 +57,6 @@ public class HabitDetailFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
-//        menu.clear();
         menuInflater.inflate(R.menu.menu_habit_detail, menu);
         super.onCreateOptionsMenu(menu, menuInflater);
     }
