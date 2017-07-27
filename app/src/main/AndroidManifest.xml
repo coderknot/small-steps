@@ -37,12 +37,14 @@
         <activity
             android:name=".ui.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ui.AboutActivity">
+        <activity android:name=".ui.NewHabitActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.smallsteps.ui.MainActivity" />
         </activity>
-        <activity android:name=".ui.NewHabitActivity">
+        <activity
+            android:name=".ui.AboutActivity"
+            android:label="About">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.smallsteps.ui.MainActivity" />
