@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.epicodus.smallsteps.ui.HabitsListActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
@@ -64,6 +63,26 @@
 
             </android.support.design.widget.TextInputLayout>
 
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel"
+                app:hintTextAppearance="@style/TextInputLayoutHint">
+
+                <EditText
+                    android:id="@+id/newHabitReasonEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/newHabit_newHabitReasonEditText_hint"
+                    android:inputType="text"
+                    android:nextFocusDown="@+id/newHabitCreateButton"
+                    android:padding="10dp"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="20sp"
+                    android:background="@color/colorPrimaryDarkTransparent" />
+
+            </android.support.design.widget.TextInputLayout>
+
         </LinearLayout>
 
     </LinearLayout>
@@ -80,7 +99,7 @@
             android:layout_centerHorizontal="true"
             android:background="@color/colorPrimary"
             android:textColor="@color/colorPrimaryText"
-            android:text="Create Habit" />
+            android:text="@string/newHabit_newHabitCreateButton_text" />
 
     </RelativeLayout>
 

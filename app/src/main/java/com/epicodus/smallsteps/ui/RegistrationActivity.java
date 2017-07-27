@@ -143,7 +143,6 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
                         mAuthProgressDialog.dismiss();
 
                         if(task.isSuccessful()) {
-                            Log.v(TAG, "Authentication successful");
                             createUserProfile(task.getResult().getUser());
                         } else {
                             Toast.makeText(RegistrationActivity.this, "Authentication failed", Toast.LENGTH_LONG).show();
