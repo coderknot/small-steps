@@ -92,7 +92,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
                 final FirebaseUser user = firebaseAuth.getCurrentUser();
 
                 if(user != null) {
-                    Intent authStateIntent = new Intent(RegistrationActivity.this, Main2Activity.class);
+                    Intent authStateIntent = new Intent(RegistrationActivity.this, MainActivity.class);
                     authStateIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(authStateIntent);
                     finish();
