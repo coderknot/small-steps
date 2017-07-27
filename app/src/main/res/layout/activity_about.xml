@@ -90,7 +90,7 @@
         android:width="200dp"
         android:background="@color/colorPrimary"
         android:textColor="@color/colorPrimaryText"
-        android:text="Project Github" />
+        android:text="@string/about_githubButton_text" />
 
     <Button
         android:id="@+id/backButton"
@@ -102,6 +102,6 @@
         android:width="200dp"
         android:background="@color/colorPrimaryDark"
         android:textColor="@color/colorPrimaryText"
-        android:text="Back" />
+        android:text="@string/about_backButton_text" />
 
 </RelativeLayout>

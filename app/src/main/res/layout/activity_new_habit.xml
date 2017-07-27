@@ -99,7 +99,7 @@
             android:layout_centerHorizontal="true"
             android:background="@color/colorPrimary"
             android:textColor="@color/colorPrimaryText"
-            android:text="Create Habit" />
+            android:text="@string/newHabit_newHabitCreateButton_text" />
 
     </RelativeLayout>
 

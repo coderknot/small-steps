@@ -2,7 +2,10 @@
     <string name="app_name">Small Steps</string>
     <string name="app_background">App Background</string>
 
-    <string name="menu_logout_title">Logout</string>
+    <string name="menu_main_logout_title">Logout</string>
+    <string name="menu_habit_detail_habit_edit_title">Edit Habit</string>
+    <string name="menu_habit_detail_habit_delete_title">Delete Habit</string>
+
     <string name="main_groupSearchButton_text">Group Search</string>
     <string name="main_aboutButton_text">About</string>
     <string name="main_habitsButton_text">Habits List</string>
@@ -12,9 +15,20 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string name="activity_main_drawer_nav_all_habits_title">All Habits</string>
+    <string name="activity_main_drawer_nav_new_habit_title">New Habit</string>
+    <string name="activity_main_drawer_nav_information_group_title">Information</string>
+    <string name="activity_main_drawer_nav_about_title">About</string>
+    <string name="activity_main_drawer_nav_contact_title">Contact</string>
+
+    <string name="habitList_habitTitleTextView_text">Habit Name</string>
+
+    <string name="habitDetail_habitDetailReasonTextView_text">Habit Reason</string>
+
     <string name="newHabit_title">New Habit</string>
     <string name="newHabit_newHabitTitleEditText_hint">Title</string>
     <string name="newHabit_newHabitReasonEditText_hint">Reason (Optional)</string>
+    <string name="newHabit_newHabitCreateButton_text">Create Habit</string>
 
     <string name="login_loginTitleTextView_text">Account Login</string>
     <string name="login_loginEmailEditText_hint">Email</string>
@@ -46,4 +60,6 @@
     <string name="about_text_5">
         With this process, small steps build big habits!
     </string>
+    <string name="about_githubButton_text">Project GitHub</string>
+    <string name="about_backButton_text">Back</string>
 </resources>
