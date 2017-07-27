@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.content_frame, new HabitsListFragment());
             fragmentTransaction.addToBackStack("habitsList");
             fragmentTransaction.commit();
-        } else if (id == R.id.nav_new_habits) {
+        } else if (id == R.id.nav_new_habit) {
             startActivity(new Intent(MainActivity.this, NewHabitActivity.class));
         }
 
